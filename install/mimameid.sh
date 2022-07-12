@@ -1,14 +1,14 @@
 #!/system/bin/sh
-export TMPDIR="/data/data/org.androidbootmanager.app/cache"
+export TMPDIR="/data/data/com.volla.bootmanager/cache"
 
 # Mount
-/data/data/org.androidbootmanager.app/assets/Scripts/config/mount/mimameid.sh
+/data/data/com.volla.bootmanager/assets/Scripts/config/mount/mimameid.sh
 
 # Create folder for new OS
 mkdir -p "/data/abm/bootset/VollaOS"
 
 # Copy logo
-cp /data/data/org.androidbootmanager.app/assets/Logos/VollaOS.bin "/data/abm/bootset/VollaOS/logo.bin"
+cp /data/data/com.volla.bootmanager/assets/Logos/VollaOS.bin "/data/abm/bootset/VollaOS/logo.bin"
 
 # Create entry
 cat << EOF >> /data/abm/bootset/db/db.conf
@@ -27,4 +27,4 @@ cat << EOF >> "/data/abm/bootset/db/entries/VollaOS.conf"
   xdata      real
 EOF
 
-/data/data/org.androidbootmanager.app/assets/Scripts/config/umount/mimameid.sh
+/data/data/com.volla.bootmanager/assets/Scripts/config/umount/mimameid.sh

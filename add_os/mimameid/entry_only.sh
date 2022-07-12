@@ -1,9 +1,9 @@
 #!/system/bin/sh
-export TMPDIR="/data/data/org.androidbootmanager.app/cache"
+export TMPDIR="/data/data/com.volla.bootmanager/cache"
 
 # Script for installing other OSes. Parameters: ROM folder name, ROM name in menu
 
-TK="/data/data/org.androidbootmanager.app/assets/Toolkit"
+TK="/data/data/com.volla.bootmanager/assets/Toolkit"
 PATH="$TK:$PATH"
 cd "$TK" || exit 24
 

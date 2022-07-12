@@ -1,9 +1,9 @@
 #!/system/bin/sh
-export TMPDIR="/data/data/org.androidbootmanager.app/cache"
+export TMPDIR="/data/data/com.volla.bootmanager/cache"
 
 # Script for installing Ubuntu Touch, with system image and halium boot for ABM. Parameters: ROM folder name, ROM name in menu, system partition number, data partition number, haliumboot path
 
-TK="/data/data/org.androidbootmanager.app/assets/Toolkit"
+TK="/data/data/com.volla.bootmanager/assets/Toolkit"
 PATH="$TK:$PATH"
 cd "$TK" || exit 24
 
@@ -37,7 +37,7 @@ cp /data/abm/tmp/boot/boot.img-zImage "/data/abm/bootset/$1/zImage"
 cp /data/abm/tmp/boot/boot.img-ramdisk.gz "/data/abm/bootset/$1/initrd.cpio.gz"
 
 # Copy logo
-cp /data/data/org.androidbootmanager.app/assets/Logos/UbuntuTouch.bin "/data/abm/bootset/$1/logo.bin"
+cp /data/data/com.volla.bootmanager/assets/Logos/UbuntuTouch.bin "/data/abm/bootset/$1/logo.bin"
 
 # Create entry
 cat << EOF >> "/data/abm/bootset/db/entries/$1.conf"
